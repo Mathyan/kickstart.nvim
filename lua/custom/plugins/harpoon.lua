@@ -23,7 +23,7 @@ return {
 
     -- Select first mark
     {
-      '<C-j>',
+      '<leader>j',
       function()
         require('harpoon'):list():select(1)
       end,
@@ -33,7 +33,7 @@ return {
 
     -- Select second mark
     {
-      '<C-k>',
+      '<leader>k',
       function()
         require('harpoon'):list():select(2)
       end,
@@ -43,7 +43,7 @@ return {
 
     -- Select third mark
     {
-      '<C-l>',
+      '<leader>l',
       function()
         require('harpoon'):list():select(3)
       end,
@@ -53,7 +53,7 @@ return {
 
     -- Select fourth mark
     {
-      '<C-;>',
+      '<leader>;',
       function()
         require('harpoon'):list():select(4)
       end,

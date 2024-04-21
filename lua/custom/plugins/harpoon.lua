@@ -12,7 +12,7 @@ return {
       desc = '[A]dd harpoon mark',
     },
     {
-      '<leader>h',
+      '<c-h>',
       function()
         local harpoon = require 'harpoon'
         harpoon.ui:toggle_quick_menu(require('harpoon'):list())
@@ -23,7 +23,7 @@ return {
 
     -- Select first mark
     {
-      '<leader>j',
+      '<c-j>',
       function()
         require('harpoon'):list():select(1)
       end,
@@ -33,7 +33,7 @@ return {
 
     -- Select second mark
     {
-      '<leader>k',
+      '<c-k>',
       function()
         require('harpoon'):list():select(2)
       end,
@@ -43,7 +43,7 @@ return {
 
     -- Select third mark
     {
-      '<leader>l',
+      '<c-l>',
       function()
         require('harpoon'):list():select(3)
       end,
@@ -53,7 +53,7 @@ return {
 
     -- Select fourth mark
     {
-      '<leader>;',
+      '<c-;>',
       function()
         require('harpoon'):list():select(4)
       end,

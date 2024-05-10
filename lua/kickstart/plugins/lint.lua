@@ -4,11 +4,22 @@ return {
     'mfussenegger/nvim-lint',
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
+      require('mason').setup {
+        linters = {
+          markdown = { 'markdownlint' },
+          json = { 'jsonlint' },
+          text = { 'vale' },
+          bash = { 'shellcheck' },
+          lua = { 'luacheck' },
+        },
+      }
       local lint = require 'lint'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
         json = { 'jsonlint' },
-        -- text = { 'vale' },
+        text = { 'vale' },
+        bash = { 'shellcheck' },
+        lua = { 'luacheck' },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
